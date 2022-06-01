@@ -137,7 +137,7 @@ button {
   max-width: 40rem;
   height: fit-content;
   padding: 15px;
-  margin: 0 auto;
+  margin: auto auto;
   margin: 0.5rem 1rem;
 }
 
