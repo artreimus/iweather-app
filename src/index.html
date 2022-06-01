@@ -9,10 +9,11 @@
       src="https://kit.fontawesome.com/2ed7e3a78c.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./index.js" defer></script>
+    <script type="module" src="./index.js" defer></script>
     <title>iWeather</title>
   </head>
   <body>
+    <div class="error-container none" data-error-container></div>
     <div class="main">
       <div class="container-header">
         <h1>
@@ -42,26 +43,28 @@
         </button>
       </div>
       <div class="container-output">
-        <img src="./icons/sunny.png" alt="Sun" class="weather-icon" />
-        <div class="temperature">37<span>°</span>C</div>
-        <div class="location">Manila, Philippines</div>
+        <img src="" alt="" class="weather-icon" data-weather-icon />
+        <div class="temperature" data-temperature>
+          <span class="unit-temperature"></span>
+        </div>
+        <div class="location" data-location></div>
         <div class="weather-details-container">
           <div class="weather details">
             <p class="weather-header">Weather</p>
-            <p class="weather-body">Scattered Clouds</p>
+            <p class="weather-body" data-weather>-</p>
           </div>
           <div class="wind-speed details">
             <p class="weather-header">Wind Speed</p>
-            <p class="weather-body">
-              1.2
-              <span class="unit">m/s</span>
+            <p class="weather-body" data-wind-speed>
+              -
+              <span class="unit"></span>
             </p>
           </div>
           <div class="humidity-container details">
             <p class="weather-header">Humidity</p>
-            <p class="weather-body">
-              100
-              <span class="unit">%</span>
+            <p class="weather-body" data-humidity>
+              -
+              <span class="unit"></span>
             </p>
           </div>
         </div>
