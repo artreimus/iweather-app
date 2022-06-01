@@ -18,20 +18,25 @@ function getWeather(response) {
   renderDisplay(city, country, weatherCategory, weather, temperature, humidity, windSpeed);
 }
 
-function fetchCoordinates(LOCATION_COORDINATES_API) {
-  fetch(LOCATION_COORDINATES_API).then((response) => response.json()).then((response) => {
-    getWeather(response);
-  }).catch(() => {
+async function fetchCoordinates(LOCATION_COORDINATES_API) {
+  try {
+    const response = await fetch(LOCATION_COORDINATES_API, { mode: 'cors' });
+    const coordinatesData = await response.json();
+    getWeather(coordinatesData);
+  } catch {
     displayError('City not found');
-  });
+  }
 }
 
-function fetchWeather(WEATHER_API) {
-  fetch(WEATHER_API).then((response) => response.json()).then((response) => {
-    getWeather(response);
-  }).catch(() => {
+async function fetchWeather(WEATHER_API) {
+  try {
+    const response = await fetch(WEATHER_API, { mode: 'cors' });
+    const weatherData = await response.json();
+    getWeather(weatherData);
+    console.log('OK');
+  } catch {
     displayError('Weather not found');
-  });
+  }
 }
 
 function getUserLocation(position) {

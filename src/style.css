@@ -73,7 +73,7 @@ body {
   font-family: var(--ff-primary);
   height: 100vh;
   background-image: var(--default-gradient);
-  gap: 15px;
+  gap: 0.5rem;
 }
 
 .Clear {
@@ -109,9 +109,10 @@ button {
   background-color: var(--secondary-bgc);
   border-radius: 15px;
   border: rgb(255, 92, 92) solid 3px;
-  min-width: 40rem;
+  min-width: 20rem;
+  max-width: 90%;
   height: 4rem;
-  padding: 15px;
+  padding: 1rem;
 }
 
 .error-container i {
@@ -132,12 +133,12 @@ button {
   flex-direction: column;
   background-color: var(--secondary-bgc);
   border-radius: 15px;
-
+  min-width: 20rem;
   max-width: 40rem;
   height: fit-content;
   padding: 15px;
   margin: 0 auto;
-  margin: 15px;
+  margin: 0.5rem 1rem;
 }
 
 .container-header {
@@ -287,5 +288,5 @@ button {
 }
 
 .unit-temperature {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }

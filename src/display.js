@@ -51,7 +51,7 @@ function displayWeather(weather) {
 }
 
 function displayTemperature(temperature) {
-  temperatureDisplay.innerHTML = `${temperature}<span class="unit">°C</span>`;
+  temperatureDisplay.innerHTML = `${temperature}<span class="unit-temperature">°C</span>`;
 }
 
 function displayHumidity(humidity) {
